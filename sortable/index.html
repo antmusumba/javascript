@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Superhero Data</title>
+  <style>
+    /* Add basic styling */
+    body {
+      font-family: Arial, sans-serif;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+    th {
+      cursor: pointer;
+    }
+    img {
+      max-width: 50px;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>Superhero Data</h1>
+  
+  <!-- Select for page size -->
+  <label for="pageSize">Page Size:</label>
+  <select id="pageSize">
+    <option value="10">10</option>
+    <option value="20" selected>20</option>
+    <option value="50">50</option>
+    <option value="100">100</option>
+    <option value="all">All</option>
+  </select>
+  
+  <!-- Search input -->
+  <label for="search">Search:</label>
+  <input type="text" id="search" placeholder="Search by name">
+  
+  <!-- Table for displaying data -->
+  <table id="superheroTable">
+    <thead>
+      <tr>
+        <th onclick="sortTable('icon')">Icon</th>
+        <th onclick="sortTable('name')">Name</th>
+        <th onclick="sortTable('fullName')">Full Name</th>
+        <th onclick="sortTable('powerstats')">Powerstats</th>
+        <th onclick="sortTable('race')">Race</th>
+        <th onclick="sortTable('gender')">Gender</th>
+        <th onclick="sortTable('height')">Height</th>
+        <th onclick="sortTable('weight')">Weight</th>
+        <th onclick="sortTable('placeOfBirth')">Place Of Birth</th>
+        <th onclick="sortTable('alignment')">Alignment</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Rows will be dynamically inserted here -->
+    </tbody>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+</html>
