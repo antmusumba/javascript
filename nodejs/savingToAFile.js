@@ -27,7 +27,7 @@ program
     .argument('<sentence>', 'Sentence to transform')
     .option('-o, --output <file>', 'Output file', 'verydisco-forever.txt')
     .action(async (sentence, options) => {
-        const transformed = veryDiscoSentence(sentence);
+        const transformed = veryDiscoSentence(sentence) + '\n';
         const outputFilePath = join(process.cwd(), options.output);
         try {
             await writeFile(outputFilePath, transformed, 'utf-8');
